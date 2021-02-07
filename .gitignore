@@ -1,3 +1,6 @@
+# sonarlint 
+.sonarlint/
+
 # Gradle
 build
 .gradle
