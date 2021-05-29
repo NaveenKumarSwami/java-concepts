@@ -1,0 +1,53 @@
+
+What is the time complexity?
+int i, j, k = 0;
+for (i = n / 2; i <= n; i++) {
+  for (j = 2; j <= n; j = j * 2) {
+    k = k + n / 2;
+  }
+} 
+
+
+What is the output of following function for start pointing to first node of following
+linked list? 1->2->3->4->5->6
+void fun(struct node* start)
+{
+if(start == NULL)
+return;
+printf("%d ", start->data);
+if(start->next != NULL )
+fun(start->next->next);
+printf("%d ", start->data);
+}  
+
+
+What is the output? (list = 1->2->3->4->5->6->7)
+void check(struct node *list)
+{
+struct node *p, * q;
+int temp;
+if ((!list) || !list->next)
+return;
+p = list;
+q = list->next;
+while(q)
+{
+temp = p->value;
+p->value = q->value;
+q->value = temp;
+p = q->next;
+q = p?p->next:0;
+}
+} 
+
+
+
+WAP to delete the pair of elements in an linked list whose sum is equal to the number given and return the remaining list. Values can be repeated and the list is unsorted.
+e.g. list = 1,2,3,4,5,6 
+Sum = 5
+1 + 4 = 5
+2 + 3 = 5
+Remove (1,4) & (2,3)
+Return 5, 6 
+
+

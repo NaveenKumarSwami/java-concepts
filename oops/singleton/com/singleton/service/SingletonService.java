@@ -13,4 +13,11 @@ public class SingletonService {
 		}
 		return singletonSericeInstance;
 	}
+
+	public static SingletonService SingletonService() {
+		if (singletonSericeInstance == null) {
+			singletonSericeInstance = new SingletonService();
+		}
+		return singletonSericeInstance;
+	}
 }

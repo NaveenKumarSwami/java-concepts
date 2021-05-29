@@ -1,5 +1,5 @@
 package com.polymorphism.service;
 
-public class PollymorphismService {
-
+public enum Gender {
+	MALE, FEMALE;
 }
